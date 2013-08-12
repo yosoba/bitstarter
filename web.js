@@ -2,13 +2,13 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
-fs.readFileSync('/home/yinka/bitstarter/index.html', function (err, data) {
-  if (err) throw err;
-  console.log(data);
-});
+var fs = require('fs');
+var data = fs.readFileSync('./index.html', 'utf8');
+// wait for the result, then use it
+console.log(data);
 
 app.get('/', function(request, response) {
-  response.send('Hello World2!');
+  response.send(data);
 });
 
 var port = process.env.PORT || 5000;
