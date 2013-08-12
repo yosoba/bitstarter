@@ -8,10 +8,10 @@ var fs = require('fs');
 //console.log(data);
 
 var buffer = fs.readFileSync('./index.html', 'utf8');
-console.log(buffer.toString("utf8"));
+console.log(buffer.toString("utf-8"));
 
 app.get('/', function(request, response) {
-  response.send(buffer.toString("utf8");
+  response.send(buffer.toString("utf-8");
 });
 
 var port = process.env.PORT || 5000;
