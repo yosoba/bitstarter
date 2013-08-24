@@ -12,7 +12,7 @@ var buffer = fs.readFileSync('./index.html', 'utf8');
 //console.log(buffer.toString("utf-8"));
 
 app.get('/', function(request, response) {
-  response.send(buffer.toString("utf-8");
+  response.send(buffer.toString("utf-8"));
 //response.send('hello');
 });
 
